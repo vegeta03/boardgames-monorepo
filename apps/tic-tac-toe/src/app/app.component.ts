@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+import { BoardComponent } from '@boardgames-monorepo/gameboard';
+
 @Component({
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, BoardComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

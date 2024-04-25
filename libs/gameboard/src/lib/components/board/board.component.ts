@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatGridListModule } from '@angular/material/grid-list';
 
@@ -15,7 +15,7 @@ export class BoardComponent implements OnInit {
   rows = 3;
   columns = 3;
 
-  boardService = Inject(BoardService);
+  boardService = inject(BoardService);
 
   ngOnInit(): void {
     this.boardService.createBoard(this.rows, this.columns);
