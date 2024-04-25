@@ -1,1 +1,9 @@
-<p>board works!</p>
+<mat-grid-list [cols]="columns" [rowHeight]="columns + ':' + (columns - 1)">
+  @for (row of boardService.board; track rowIndex; let rowIndex = $index) {
+    @for (column of row; track columnIndex; let columnIndex = $index) {
+      <mat-grid-tile>
+        {{ rowIndex + ", " + columnIndex }}
+      </mat-grid-tile>
+    }
+  }
+</mat-grid-list>
