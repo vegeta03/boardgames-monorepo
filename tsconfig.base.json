@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@boardgames-monorepo/gameboard": ["libs/gameboard/src/index.ts"]
+      "@boardgames-monorepo/gameboard": ["libs/gameboard/src/index.ts"],
+      "@boardgames-monorepo/utils": ["libs/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
