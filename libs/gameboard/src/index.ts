@@ -1,1 +1,1 @@
-export * from './lib/gameboard/gameboard.component';
+export * from './lib/components';
