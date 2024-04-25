@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BoardService } from '../../services';
 
 @Component({
   selector: 'lib-board',
@@ -8,4 +9,13 @@ import { CommonModule } from '@angular/common';
   templateUrl: './board.component.html',
   styleUrl: './board.component.scss',
 })
-export class BoardComponent {}
+export class BoardComponent implements OnInit {
+  rows = 3;
+  columns = 3;
+
+  boardService = Inject(BoardService);
+
+  ngOnInit(): void {
+    this.boardService;
+  }
+}
