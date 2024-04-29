@@ -1,9 +1,21 @@
-<mat-grid-list [cols]="columns" [rowHeight]="columns + ':' + (columns - 1)">
-  @for (row of boardService.board; track rowIndex; let rowIndex = $index) {
-    @for (column of row; track columnIndex; let columnIndex = $index) {
-      <mat-grid-tile>
-        {{ rowIndex + ", " + columnIndex }}
-      </mat-grid-tile>
-    }
-  }
-</mat-grid-list>
+<article>
+  <section id="gameboard">
+    <mat-grid-list [cols]="columns" [rowHeight]="columns + ':' + (columns - 1)">
+      @for (row of boardService.board; track rowIndex; let rowIndex = $index) {
+        @for (column of row; track columnIndex; let columnIndex = $index) {
+          <mat-grid-tile id="gameboard-cell">
+            {{ rowIndex + ", " + columnIndex }}
+          </mat-grid-tile>
+        }
+      }
+    </mat-grid-list>
+  </section>
+  <section id="side-panel">
+    <section id="score-board">
+      <header>Score Board</header>
+    </section>
+    <section id="moves">
+      <header>Moves</header>
+    </section>
+  </section>
+</article>

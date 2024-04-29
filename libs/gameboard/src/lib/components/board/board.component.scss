@@ -1,3 +1,15 @@
+#gameboard-cell {
+  border: 2px solid grey;
+}
+
 mat-grid-tile {
   background: lightblue;
+}
+
+#gameboard {
+  display: grid;
+  width: 60vmax;
+  margin: 1rem 20rem 1rem 20rem;
+  font-size: 2rem;
+  font-weight: lighter;
 }
